@@ -1,4 +1,1 @@
 # PythonProgramming
-
-## Week One:
-- Filename: 
