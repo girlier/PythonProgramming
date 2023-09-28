@@ -2,4 +2,4 @@
 
 ## Week One:
 - Filename:
-[[Exercise_Module_1.py]]
+[[Exercises_Module_1.py]]
