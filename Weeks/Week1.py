@@ -1,4 +1,17 @@
-# All the commands from the week one exercies
+# All the commands from the week one exercises #
+
+
+
+ █     █░▓█████ ▓█████  ██ ▄█▀    ▒█████   ███▄    █ ▓█████ 
+▓█░ █ ░█░▓█   ▀ ▓█   ▀  ██▄█▒    ▒██▒  ██▒ ██ ▀█   █ ▓█   ▀ 
+▒█░ █ ░█ ▒███   ▒███   ▓███▄░    ▒██░  ██▒▓██  ▀█ ██▒▒███   
+░█░ █ ░█ ▒▓█  ▄ ▒▓█  ▄ ▓██ █▄    ▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄ 
+░░██▒██▓ ░▒████▒░▒████▒▒██▒ █▄   ░ ████▓▒░▒██░   ▓██░░▒████▒
+░ ▓░▒ ▒  ░░ ▒░ ░░░ ▒░ ░▒ ▒▒ ▓▒   ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░
+  ▒ ░ ░   ░ ░  ░ ░ ░  ░░ ░▒ ▒░     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░
+  ░   ░     ░      ░   ░ ░░ ░    ░ ░ ░ ▒     ░   ░ ░    ░   
+    ░       ░  ░   ░  ░░  ░          ░ ░           ░    ░  ░
+                                                            
 
 # A function that prints 'Hello World' #
 def helloworld():
@@ -12,25 +25,31 @@ def name():
 
 # A function that prints the Conversion of 38.4C into Fahrenheit #
 def celsius2fahrenheit():
-    print(str(38.4) + ' Celsius is ' + str(38.4 * (9 / 5) + 32) + ' Fahrenheit')
+    FahrenheitTemp = 38.4 * 9 / 5 + 32
+    print(f'38.4 Celsius is {FahrenheitTemp} Fahrenheit')
 
 
 # A function that returns Geoffrey Boycott's batting average #
 def batting():
-    print("Geoffrey Boycott's Batting average is: " + str(round(48426 / (1014 - 162))) + '% (1dp)')
+    print(f"Geoffrey Boycott's Batting average is: {48426 / (1014 - 162)}")
 
 
 # A function that displays how many groups there can be with an amount of students #
 def poppleton():
     LabSize = 24
-    Numb = 0
     NoStudents = [113, 175, 12]
-    groupStats = [[0, 0], [0, 0], [0, 0]]
-    groupCalc = [0, 0, 0]
+    GroupStats = []
+    GroupCalc = []
+
+    # Does all the Calculations and puts them in the GroupStats Array #
     for n in NoStudents:
-        groupStats[Numb][0] = n // LabSize
-        groupStats[Numb][1] = n % LabSize
-        Numb += 1
+        Group = n // LabSize
+        LeftOver = n % LabSize
+        GroupStats.append((Group, LeftOver))
+
+    # Combines all the GroupStats in to readable text
     for i in range(3):
-        groupCalc[i - 1] = ' In group ' + str(i) + ' there would be ' + str(groupStats[i - 1][0]) + ' groups with ' + str(groupStats[i - 1][1]) + 'Left Overs\n'
-    return groupCalc[0] + groupCalc[1] + groupCalc[2]
+        GroupCalc.append(f'In group {i+1} there would be {GroupStats[i - 1][0]} groups with {GroupStats[i - 1][1]} Left Overs\n')
+
+    # prints the whole list
+    print(''.join(GroupCalc))
