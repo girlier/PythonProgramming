@@ -8,45 +8,52 @@
 #          ▀     █    ▐    █    ▐   █    ▐      █                             ▐     ▐
 #                ▐         ▐        ▐           ▐
 
-def NumberValid():
+def numbrvaild():
     number = int(input('Write a number between 0-100'))
+
+    # Checks if the number is within 0 - 100
     if 0 <= number <= 100:
         print('The Number is valid')
     else:
         print('The Number is invalid')
 
 
-def Upper_Lower():
-    string = input('Input a string')
-    Upper = 0
-    Lower = 0
-    for x in string:
+def upperlower():
+    input_string = input('Input a string')
+    Upper = Lower = 0
+
+    # Goes through each character and uses a counter system to count up every time it encounters an upper and a lower character
+    for x in input_string:
         if x.isupper():
             Upper += 1
         elif x.islower():
             Lower += 1
+
+    # Prints the amount of upper and lower characters in an input
     print(f'There is {Upper} Uppercase letters and {Lower} Lowercase Letters')
 
 
 def greetings():
     YourName = input('Hello, what is your name?\n >>>')
-    FixedName = ''
+
+    # Checks if there is no input
     if YourName == '':
         YourName = 'Stranger'
-    for char in enumerate(YourName):
-        if FixedName = '':
-            FixedName += char.upper()
-        else:
-            FixedName += char.lower()
-    print(f'Hello, {FixedName}  Good to meet you!')
+
+    # Prints the name with all characters capitalized except the first which is capitalised
+    print(f'Hello, {YourName.capitalize()}  Good to meet you!')
 
 
-def String():
-    string = input('Input a string')
-    if len(string) != 1:
-        print(string)
+def string():
+    input_string = input('Input a string')
+
+    # Checks if the input is 1 character long
+    if len(input_string) <= 1:
+        print(input_string)
+
+    # If the character is longer than one it slices the last character
     else:
-        print(string[:-1])
+        print(input_string[:-1])
 
 
 def celsius2fahrenheit():
