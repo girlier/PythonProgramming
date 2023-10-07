@@ -41,3 +41,4 @@ def Sweets():
 
     # Prints the result as a string
     print(f'As the Teacher, you would have to give each student {SweetsPP} you would have {SweetsLO} left over')
+

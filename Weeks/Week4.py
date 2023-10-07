@@ -66,3 +66,4 @@ def fahrenheit2celsius():
     Fahrenheit = float(input('What is the temperature in Fahrenheit? \n >>> '))
     Celsius = (((Fahrenheit-32)*5)/9)
     print(f'{Fahrenheit} Fahrenheit is {Celsius} Celsius')
+

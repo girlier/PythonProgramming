@@ -64,3 +64,4 @@ def times_table():
         for i in range(13):
             result = number * i
             print(f'{i} x {number} = {result}')
+
