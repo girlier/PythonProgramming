@@ -8,6 +8,9 @@
 #          ▀     █    ▐    █    ▐   █    ▐      █                             ▐     ▐
 #                ▐         ▐        ▐           ▐
 
+
+# TYPE THE FUNCTION AS PARAMETERS INSTEAD OF INPUTS
+
 def numbrvaild():
     number = int(input('Write a number between 0-100'))
 
@@ -56,8 +59,8 @@ def string():
         print(input_string[:-1])
 
 
-def celsius2fahrenheit():
-    Celsius = float(input('What is the temperature in Celsius? \n >>> '))
+def celsius2fahrenheit(Celsius):
+    Celsius = float(Celsius)
     Fahrenheit = Celsius * 9 / 5 + 32
     print(f'{Celsius} Celsius is {Fahrenheit} Fahrenheit')
 
