@@ -8,21 +8,15 @@
 #          ▀     █    ▐    █    ▐   █    ▐      █                             ▐     ▐
 #                ▐         ▐        ▐           ▐
 
-
-# TYPE THE FUNCTION AS PARAMETERS INSTEAD OF INPUTS
-
-def numbrvaild():
-    number = int(input('Write a number between 0-100'))
-
+def numbrvaild(number):
     # Checks if the number is within 0 - 100
-    if 0 <= number <= 100:
-        print('The Number is valid')
+    if 0 <= int(number) <= 100:
+        return True
     else:
-        print('The Number is invalid')
+        return False
 
 
-def upperlower():
-    input_string = input('Input a string')
+def upperlowerNumb(input_string) -> str:
     Upper = Lower = 0
 
     # Goes through each character and uses a counter system to count up every time it encounters an upper and a lower character
@@ -33,40 +27,36 @@ def upperlower():
             Lower += 1
 
     # Prints the amount of upper and lower characters in an input
-    print(f'There is {Upper} Uppercase letters and {Lower} Lowercase Letters')
+    return f'There is {Upper} Uppercase letters and {Lower} Lowercase Letters'
 
 
-def greetings():
-    YourName = input('Hello, what is your name?\n >>>')
-
+def greetings(name) -> str:
     # Checks if there is no input
-    if YourName == '':
-        YourName = 'Stranger'
+    if name == '':
+        name = 'Stranger'
 
     # Prints the name with all characters capitalized except the first which is capitalised
-    print(f'Hello, {YourName.capitalize()}  Good to meet you!')
+    return f'Hello, {name.capitalize()}  Good to meet you!'
 
 
-def string():
+def stringMinusOne(string) -> str:
     input_string = input('Input a string')
 
     # Checks if the input is 1 character long
     if len(input_string) <= 1:
-        print(input_string)
+        return input_string
 
     # If the character is longer than one it slices the last character
     else:
-        print(input_string[:-1])
+        return input_string[:-1]
 
 
-def celsius2fahrenheit(Celsius):
-    Celsius = float(Celsius)
-    Fahrenheit = Celsius * 9 / 5 + 32
-    print(f'{Celsius} Celsius is {Fahrenheit} Fahrenheit')
+def celsius2fahrenheit(Celsius) -> str:
+    Fahrenheit = (Celsius * 9 / 5 + 32)
+    return str(Fahrenheit) + '°F'
 
 
-def fahrenheit2celsius():
-    Fahrenheit = float(input('What is the temperature in Fahrenheit? \n >>> '))
+def fahrenheit2celsius(Fahrenheit) -> str:
     Celsius = (((Fahrenheit-32)*5)/9)
-    print(f'{Fahrenheit} Fahrenheit is {Celsius} Celsius')
+    return str(Celsius) + '°C'
 
